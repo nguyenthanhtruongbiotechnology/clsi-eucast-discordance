@@ -1,0 +1,12 @@
+# Thu vien cho du an so sanh nguong CLSI - EUCAST
+# Cai bang: python -m pip install -r requirements.txt
+
+pandas>=2.0
+numpy>=1.24
+matplotlib>=3.7
+
+# Doc file Excel cua EUCAST neu can
+openpyxl>=3.1
+
+# Tuy chon - chi can neu ban muon lam viec trong notebook
+# jupyterlab>=4.0

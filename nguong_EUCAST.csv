@@ -1,0 +1,67 @@
+loai,khang_sinh,he,phien_ban,nguong_nhay,nguong_khang
+Acinetobacter baumannii,amikacin,EUCAST,EUCAST v16.1 2026,8.0,8.0
+Acinetobacter baumannii,ciprofloxacin,EUCAST,EUCAST v16.1 2026,0.001,1.0
+Acinetobacter baumannii,colistin,EUCAST,EUCAST v16.1 2026,2.0,2.0
+Acinetobacter baumannii,doripenem,EUCAST,EUCAST v16.1 2026,0.001,2.0
+Acinetobacter baumannii,gentamicin,EUCAST,EUCAST v16.1 2026,4.0,4.0
+Acinetobacter baumannii,imipenem,EUCAST,EUCAST v16.1 2026,2.0,4.0
+Acinetobacter baumannii,levofloxacin,EUCAST,EUCAST v16.1 2026,0.5,1.0
+Acinetobacter baumannii,meropenem,EUCAST,EUCAST v16.1 2026,2.0,8.0
+Acinetobacter baumannii,tobramycin,EUCAST,EUCAST v16.1 2026,4.0,4.0
+Acinetobacter baumannii,trimethoprim/sulfamethoxazole,EUCAST,EUCAST v16.1 2026,0.5,0.5
+Enterobacterales,amikacin,EUCAST,EUCAST v16.1 2026,8.0,8.0
+Enterobacterales,amoxicillin/clavulanic acid,EUCAST,EUCAST v16.1 2026,8.0,8.0
+Enterobacterales,ampicillin,EUCAST,EUCAST v16.1 2026,8.0,8.0
+Enterobacterales,aztreonam,EUCAST,EUCAST v16.1 2026,1.0,4.0
+Enterobacterales,cefepime,EUCAST,EUCAST v16.1 2026,1.0,4.0
+Enterobacterales,cefotaxime,EUCAST,EUCAST v16.1 2026,1.0,2.0
+Enterobacterales,ceftazidime,EUCAST,EUCAST v16.1 2026,1.0,4.0
+Enterobacterales,ceftriaxone,EUCAST,EUCAST v16.1 2026,1.0,2.0
+Enterobacterales,ciprofloxacin,EUCAST,EUCAST v16.1 2026,0.25,0.5
+Enterobacterales,colistin,EUCAST,EUCAST v16.1 2026,2.0,2.0
+Enterobacterales,ertapenem,EUCAST,EUCAST v16.1 2026,0.5,0.5
+Enterobacterales,gentamicin,EUCAST,EUCAST v16.1 2026,2.0,2.0
+Enterobacterales,imipenem,EUCAST,EUCAST v16.1 2026,2.0,4.0
+Enterobacterales,levofloxacin,EUCAST,EUCAST v16.1 2026,0.5,1.0
+Enterobacterales,meropenem,EUCAST,EUCAST v16.1 2026,2.0,8.0
+Enterobacterales,piperacillin/tazobactam,EUCAST,EUCAST v16.1 2026,8.0,8.0
+Enterobacterales,tobramycin,EUCAST,EUCAST v16.1 2026,2.0,2.0
+Enterobacterales,trimethoprim/sulfamethoxazole,EUCAST,EUCAST v16.1 2026,0.5,0.5
+Escherichia coli,cefuroxime,EUCAST,EUCAST v16.1 2026,0.001,8.0
+Escherichia coli,tigecycline,EUCAST,EUCAST v16.1 2026,0.5,0.5
+Klebsiella pneumoniae,cefuroxime,EUCAST,EUCAST v16.1 2026,0.001,8.0
+Pseudomonas aeruginosa,amikacin,EUCAST,EUCAST v16.1 2026,16.0,16.0
+Pseudomonas aeruginosa,aztreonam,EUCAST,EUCAST v16.1 2026,0.001,16.0
+Pseudomonas aeruginosa,cefepime,EUCAST,EUCAST v16.1 2026,0.001,8.0
+Pseudomonas aeruginosa,cefiderocol,EUCAST,EUCAST v16.1 2026,2.0,2.0
+Pseudomonas aeruginosa,ceftazidime,EUCAST,EUCAST v16.1 2026,0.001,8.0
+Pseudomonas aeruginosa,ceftazidime/avibactam,EUCAST,EUCAST v16.1 2026,8.0,8.0
+Pseudomonas aeruginosa,ceftolozane/tazobactam,EUCAST,EUCAST v16.1 2026,4.0,4.0
+Pseudomonas aeruginosa,ciprofloxacin,EUCAST,EUCAST v16.1 2026,0.001,0.5
+Pseudomonas aeruginosa,colistin,EUCAST,EUCAST v16.1 2026,4.0,4.0
+Pseudomonas aeruginosa,doripenem,EUCAST,EUCAST v16.1 2026,0.001,2.0
+Pseudomonas aeruginosa,imipenem,EUCAST,EUCAST v16.1 2026,0.001,4.0
+Pseudomonas aeruginosa,levofloxacin,EUCAST,EUCAST v16.1 2026,0.001,2.0
+Pseudomonas aeruginosa,meropenem,EUCAST,EUCAST v16.1 2026,2.0,8.0
+Pseudomonas aeruginosa,piperacillin,EUCAST,EUCAST v16.1 2026,0.001,16.0
+Pseudomonas aeruginosa,piperacillin/tazobactam,EUCAST,EUCAST v16.1 2026,0.001,16.0
+Pseudomonas aeruginosa,tobramycin,EUCAST,EUCAST v16.1 2026,2.0,2.0
+Salmonella enterica,ciprofloxacin,EUCAST,EUCAST v16.1 2026,0.06,0.06
+Serratia marcescens,trimethoprim/sulfamethoxazole,EUCAST,EUCAST v16.1 2026,0.001,2.0
+Staphylococcus aureus,ciprofloxacin,EUCAST,EUCAST v16.1 2026,0.001,2.0
+Staphylococcus aureus,clindamycin,EUCAST,EUCAST v16.1 2026,0.25,0.25
+Staphylococcus aureus,daptomycin,EUCAST,EUCAST v16.1 2026,1.0,1.0
+Staphylococcus aureus,erythromycin,EUCAST,EUCAST v16.1 2026,1.0,1.0
+Staphylococcus aureus,fusidic acid,EUCAST,EUCAST v16.1 2026,1.0,1.0
+Staphylococcus aureus,gentamicin,EUCAST,EUCAST v16.1 2026,2.0,2.0
+Staphylococcus aureus,levofloxacin,EUCAST,EUCAST v16.1 2026,0.001,1.0
+Staphylococcus aureus,linezolid,EUCAST,EUCAST v16.1 2026,4.0,4.0
+Staphylococcus aureus,moxifloxacin,EUCAST,EUCAST v16.1 2026,0.25,0.25
+Staphylococcus aureus,penicillin,EUCAST,EUCAST v16.1 2026,0.125,0.125
+Staphylococcus aureus,quinupristin/dalfopristin,EUCAST,EUCAST v16.1 2026,1.0,1.0
+Staphylococcus aureus,rifampin,EUCAST,EUCAST v16.1 2026,0.06,0.06
+Staphylococcus aureus,teicoplanin,EUCAST,EUCAST v16.1 2026,2.0,2.0
+Staphylococcus aureus,tetracycline,EUCAST,EUCAST v16.1 2026,1.0,1.0
+Staphylococcus aureus,tigecycline,EUCAST,EUCAST v16.1 2026,0.5,0.5
+Staphylococcus aureus,trimethoprim/sulfamethoxazole,EUCAST,EUCAST v16.1 2026,0.5,0.5
+Staphylococcus aureus,vancomycin,EUCAST,EUCAST v16.1 2026,2.0,2.0

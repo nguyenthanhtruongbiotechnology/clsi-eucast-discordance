@@ -1,0 +1,23 @@
+ten_goc,ten_chuan,do_tin_cay,ghi_chu
+geamycin,gentamicin,chac,Go sai ro rang. Co o 4 loai.
+co_trimoxazole,trimethoprim/sulfamethoxazole,chac,Cung mot thuoc hai ten goi.
+amipicillin_sulbactam,ampicillin/sulbactam,chac,"Go sai chu ""amipicillin""."
+amoxicillin_clavulanat,amoxicillin/clavulanic acid,chac,Ten tieng Duc.
+tazobactam/piperacillin,piperacillin/tazobactam,chac,Dao thu tu hai thanh phan.
+phosphomycin,fosfomycin,chac,Bien the chinh ta cu.
+tigecyklin,tigecycline,chac,Ten tieng Bac Au.
+cefpirom,cefpirome,chac,Thieu chu cuoi.
+benzylpenicillin,penicillin,chac,Benzylpenicillin la penicillin G.
+ampicillin_clavulanic_acid,,LOAI,"Khong ton tai thuoc nay - che pham phoi hop voi clavulanic acid la amoxicillin. Loi cua nguoi nop du lieu, khong ro y ho la thuoc gi. Da chon LOAI. Ghi vao phan phuong phap."
+penicillin/clavulanic_acid,,LOAI,Khong phai che pham thuong dung. Khong ro y nguoi nop la gi. Da chon LOAI. Ghi vao phan phuong phap.
+ceftiofur,,LOAI,Khang sinh thu y. CLSI khong dat nguong cho nguoi.
+cefozopran,,LOAI,Dung chu yeu o Nhat. EUCAST va CLSI thuong khong co nguong.
+flomoxef,,LOAI,Dung chu yeu o Nhat. Thuong khong co nguong o ca hai he.
+cefmetazole,,LOAI,Dung chu yeu o Nhat. Kiem lai neu muon giu.
+cefotaxime/clavulanic acid,,LOAI,Thu nghiem xac nhan ESBL chu khong phai thuoc dieu tri. Khong co nguong lam sang.
+ceftazidime/clavulanic acid,,LOAI,Thu nghiem xac nhan ESBL. Khong co nguong lam sang.
+sulfisoxazole,,LOAI,Thuoc cu. Kiem lai neu muon giu.
+cephalothin,,LOAI,Cephalosporin the he 1 da loi thoi.
+amoxycillin_clavulanic_acid,amoxicillin/clavulanic acid,chac,"Bien the chinh ta ""amoxycillin"". Gap o E. coli sau khi loc MIC do that."
+amoxycillin/clavulanic acid,amoxicillin/clavulanic acid,chac,"Bien the chinh ta ""amoxycillin""."
+amoxycillin,amoxicillin,chac,"Bien the chinh ta ""amoxycillin""."
