@@ -59,7 +59,7 @@ Outputs are written to `ket_qua/`.
 
 ## Citation
 
-**[Author]**. Discordance between CLSI and EUCAST breakpoints across nine bacterial species: a reinterpretation of publicly available minimum inhibitory concentration data. Submitted, 2026.
+Nguyễn Thành Trương. Discordance between CLSI and EUCAST breakpoints across nine bacterial species: a reinterpretation of publicly available minimum inhibitory concentration data. Submitted, 2026.
 
 ## License
 
