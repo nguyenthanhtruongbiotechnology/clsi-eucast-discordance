@@ -38,8 +38,7 @@ Conventions in the breakpoint table:
 
 Data are not included. To reproduce:
 
-1. For each taxon (562 *E. coli*, 573 *K. pneumoniae*, 590 *S. enterica*, 550 *E. cloacae*, 546 *C. freundii*, 615 *S. marcescens*, 287 *P. aeruginosa*, 470 *A. baumannii*, 1280 *S. aureus*), open `https://www.bv-brc.org/view/Taxonomy/<taxon>#view_tab=amr`, apply the filter **Evidence = Laboratory Method** and download as CSV to `du_lieu/BVBRC_genome_amr_<taxon>.csv`. The filter is required for *E. coli*, which otherwise exceeds the 2 500 000-record download limit; most MIC records in BV-BRC are machine-learning predictions and are excluded by the analysis in any case.
-2. For the regional analysis, download the Genomes table of each taxon (with the Isolation Country and Collection Year columns) to `du_lieu/bo_gen/`.
+1. For each taxon (562 *E. coli*, 573 *K. pneumoniae*, 590 *S. enterica*, 550 *E. cloacae*, 546 *C. freundii*, 615 *S. marcescens*, 287 *P. aeruginosa*, 470 *A. baumannii*, 1280 *S. aureus*), open `https://www.bv-brc.org/view/Taxonomy/<taxon>#view_tab=amr` and download the AMR Phenotypes table as CSV to `du_lieu/BVBRC_genome_amr_<taxon>.csv`. For *E. coli* only, first apply the filter **Evidence = Laboratory Method**, because its full table exceeds the 2 500 000-record download limit. The other eight taxa were downloaded without a filter; this is needed to reproduce the count of model-predicted MICs (Supplementary Table 2) but does not change the analysed data, because the analysis keeps only laboratory-measured MICs.
 
 ## Running
 
