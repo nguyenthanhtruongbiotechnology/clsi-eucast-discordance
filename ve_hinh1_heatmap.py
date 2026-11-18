@@ -178,15 +178,15 @@ def ve(d):
     for s in ax.spines.values():
         s.set_visible(False)
 
-    cb = fig.colorbar(im, ax=ax, fraction=0.028, pad=0.025,
+    cb = fig.colorbar(im, ax=ax, fraction=0.028, pad=0.06,
                       ticks=np.linspace(-gh, gh, 5))
     cb.set_label("Difference in resistance rate\n(EUCAST minus CLSI, percentage points)",
                  fontsize=8.4, labelpad=10)
     cb.ax.tick_params(labelsize=7.8)
     cb.outline.set_visible(False)
-    cb.ax.text(0.5, 1.035, "EUCAST higher", transform=cb.ax.transAxes,
+    cb.ax.text(0.5, 1.05, "EUCAST higher", transform=cb.ax.transAxes,
                fontsize=7.4, ha="center", va="bottom", color="#8c2020")
-    cb.ax.text(0.5, -0.045, "CLSI higher", transform=cb.ax.transAxes,
+    cb.ax.text(0.5, -0.06, "CLSI higher", transform=cb.ax.transAxes,
                fontsize=7.4, ha="center", va="top", color="#1a4a7a")
 
     ax.text(0.0, -0.035,

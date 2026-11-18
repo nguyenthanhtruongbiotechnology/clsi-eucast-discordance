@@ -195,7 +195,9 @@ def ve_hinh2(ss, duong_dan):
         print("  khong co cap nao du mau o ca hai khu vuc, bo qua hinh 2")
         return
     fig, ax = plt.subplots(figsize=(6.2, 6.0))
-    gh = max(5, np.ceil(max(ss[["chenh_EUR", "chenh_WPR"]].abs().max()) / 5) * 5)
+    # truc phu ca thanh sai so, cong them le 5 diem
+    bien = max(ss[["eur_duoi", "eur_tren", "wpr_duoi", "wpr_tren"]].abs().max())
+    gh = max(10, np.ceil(bien / 5) * 5 + 5)
     ax.plot([-gh, gh], [-gh, gh], color="#999999", lw=0.9, ls="--", zorder=1)
     ax.axhline(0, color="#cccccc", lw=0.8, zorder=0)
     ax.axvline(0, color="#cccccc", lw=0.8, zorder=0)
@@ -209,10 +211,15 @@ def ve_hinh2(ss, duong_dan):
     # chi ghi nhan toi da 6 cap khac biet ro nhat, tranh chong chu
     nhan = ss[ss["khac_ro"]].reindex(
         ss[ss["khac_ro"]]["hieu_WPR_tru_EUR"].abs().sort_values(ascending=False).index).head(6)
-    for r in nhan.itertuples():
+    da_dat = []
+    for r in nhan.sort_values("chenh_WPR", ascending=False).itertuples():
+        # tranh chong nhan: neu gan nhan da dat thi dua xuong duoi diem
+        gan = any(abs(r.chenh_WPR - y) < 4 and abs(r.chenh_EUR - x) < 30 for x, y in da_dat)
+        dy = -11 if gan else 3
         ax.annotate(f"{r.loai.split()[0][0]}. {r.loai.split()[1]} – {r.khang_sinh}",
-                    (r.chenh_EUR, r.chenh_WPR), fontsize=7, xytext=(4, 3),
+                    (r.chenh_EUR, r.chenh_WPR), fontsize=7, xytext=(4, dy),
                     textcoords="offset points", color="#333333", style="italic")
+        da_dat.append((r.chenh_EUR, r.chenh_WPR))
     ax.set_xlim(-gh, gh)
     ax.set_ylim(-gh, gh)
     ax.set_xlabel("European Region: EUCAST minus CLSI\n(percentage points)", fontsize=9)
@@ -220,9 +227,10 @@ def ve_hinh2(ss, duong_dan):
     ax.tick_params(labelsize=8)
     for s in ("top", "right"):
         ax.spines[s].set_visible(False)
-    ax.text(0.02, 0.98, "Dashed line: equal difference in both regions\n"
-            "Red: confidence intervals do not overlap",
-            transform=ax.transAxes, fontsize=7.4, color="#666666", va="top")
+    ax.text(0.98, 0.02, "Dashed line: equal difference in both regions\n"
+            "Red: 95% CI of the regional difference excludes zero",
+            transform=ax.transAxes, fontsize=7.4, color="#666666",
+            va="bottom", ha="right")
     fig.tight_layout()
     fig.savefig(duong_dan.with_suffix(".png"), dpi=400, facecolor="white")
     fig.savefig(duong_dan.with_suffix(".pdf"), facecolor="white")
@@ -317,8 +325,15 @@ def main():
         "do_khop_WPR": w.loc[chung, "do_khop_pct"], "do_khop_EUR": e.loc[chung, "do_khop_pct"],
     }).reset_index()
     ss["hieu_WPR_tru_EUR"] = ss["chenh_WPR"] - ss["chenh_EUR"]
-    # hai KTC khong chong nhau -> khac biet ro giua hai khu vuc
-    ss["khac_ro"] = (ss["wpr_duoi"] > ss["eur_tren"]) | (ss["wpr_tren"] < ss["eur_duoi"])
+    # Khac biet giua hai khu vuc: KTC 95% cua hieu (WPR - EUR) khong chua 0.
+    # SE cua tung hieu suy tu KTC doi xung; hai khu vuc la hai mau doc lap.
+    se_w = (ss["wpr_tren"] - ss["wpr_duoi"]) / (2 * 1.96)
+    se_e = (ss["eur_tren"] - ss["eur_duoi"]) / (2 * 1.96)
+    se = np.sqrt(se_w ** 2 + se_e ** 2)
+    hieu = ss["chenh_WPR"] - ss["chenh_EUR"]
+    ss["hieu_ktc_duoi"] = hieu - 1.96 * se
+    ss["hieu_ktc_tren"] = hieu + 1.96 * se
+    ss["khac_ro"] = (ss["hieu_ktc_duoi"] > 0) | (ss["hieu_ktc_tren"] < 0)
     ss = ss.sort_values("hieu_WPR_tru_EUR", key=abs, ascending=False)
     ss.to_csv(RA / "so_sanh_WPR_EUR.csv", index=False)
     print(f"  {len(ss)} cap du mau o ca WPR va chau Au; "
